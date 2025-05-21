@@ -9,6 +9,7 @@ class Homepage:
     search_button_xpath = "//button[contains(@class, 'btn-default')]"
     my_account_drop_menu_xpath = "//span[text()='My Account']"
     login_option_link_text = "Login"
+    register_login_link_text = "Register"
 
     def enter_product_into_search_box_field(self,product_name):
         self.driver.find_element(By.NAME,self.search_box_field_name).click()
@@ -24,3 +25,6 @@ class Homepage:
 
     def select_login_option(self):
         self.driver.find_element(By.LINK_TEXT,self.login_option_link_text).click()
+
+    def select_register_options(self):
+        self.driver.find_element(By.LINK_TEXT, self.register_login_link_text).click()
